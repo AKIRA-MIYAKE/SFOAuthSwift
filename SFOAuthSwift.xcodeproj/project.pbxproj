@@ -10,6 +10,11 @@
 		A621AEC01B46CA1E00D31A7A /* SFOAuthSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = A621AEBF1B46CA1E00D31A7A /* SFOAuthSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A621AEC61B46CA1E00D31A7A /* SFOAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AEBA1B46CA1E00D31A7A /* SFOAuthSwift.framework */; };
 		A621AECD1B46CA1E00D31A7A /* SFOAuthSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AECC1B46CA1E00D31A7A /* SFOAuthSwiftTests.swift */; };
+		A621AEDB1B46CC0300D31A7A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED61B46CC0300D31A7A /* Alamofire.framework */; };
+		A621AEDC1B46CC0300D31A7A /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED71B46CC0300D31A7A /* Box.framework */; };
+		A621AEDD1B46CC0300D31A7A /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED81B46CC0300D31A7A /* OAuthSwift.framework */; };
+		A621AEDE1B46CC0300D31A7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED91B46CC0300D31A7A /* Result.framework */; };
+		A621AEDF1B46CC0300D31A7A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AEDA1B46CC0300D31A7A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		A621AEC51B46CA1E00D31A7A /* SFOAuthSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFOAuthSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A621AECB1B46CA1E00D31A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A621AECC1B46CA1E00D31A7A /* SFOAuthSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFOAuthSwiftTests.swift; sourceTree = "<group>"; };
+		A621AED61B46CC0300D31A7A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A621AED71B46CC0300D31A7A /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		A621AED81B46CC0300D31A7A /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
+		A621AED91B46CC0300D31A7A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		A621AEDA1B46CC0300D31A7A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A621AEDB1B46CC0300D31A7A /* Alamofire.framework in Frameworks */,
+				A621AEDC1B46CC0300D31A7A /* Box.framework in Frameworks */,
+				A621AEDD1B46CC0300D31A7A /* OAuthSwift.framework in Frameworks */,
+				A621AEDE1B46CC0300D31A7A /* Result.framework in Frameworks */,
+				A621AEDF1B46CC0300D31A7A /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +68,11 @@
 		A621AEB01B46CA1E00D31A7A = {
 			isa = PBXGroup;
 			children = (
+				A621AED61B46CC0300D31A7A /* Alamofire.framework */,
+				A621AED71B46CC0300D31A7A /* Box.framework */,
+				A621AED81B46CC0300D31A7A /* OAuthSwift.framework */,
+				A621AED91B46CC0300D31A7A /* Result.framework */,
+				A621AEDA1B46CC0300D31A7A /* SwiftyJSON.framework */,
 				A621AEBC1B46CA1E00D31A7A /* SFOAuthSwift */,
 				A621AEC91B46CA1E00D31A7A /* SFOAuthSwiftTests */,
 				A621AEBB1B46CA1E00D31A7A /* Products */,
@@ -327,6 +347,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SFOAuthSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -342,6 +366,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SFOAuthSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
