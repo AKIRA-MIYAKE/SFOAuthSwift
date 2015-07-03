@@ -15,6 +15,12 @@
 		A621AEDD1B46CC0300D31A7A /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED81B46CC0300D31A7A /* OAuthSwift.framework */; };
 		A621AEDE1B46CC0300D31A7A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AED91B46CC0300D31A7A /* Result.framework */; };
 		A621AEDF1B46CC0300D31A7A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621AEDA1B46CC0300D31A7A /* SwiftyJSON.framework */; };
+		A621AEE41B46CC2400D31A7A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEE01B46CC2400D31A7A /* Const.swift */; };
+		A621AEE51B46CC2400D31A7A /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEE11B46CC2400D31A7A /* Credential.swift */; };
+		A621AEE61B46CC2400D31A7A /* CredentialStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEE21B46CC2400D31A7A /* CredentialStoreProtocol.swift */; };
+		A621AEE71B46CC2400D31A7A /* DefaultCredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEE31B46CC2400D31A7A /* DefaultCredentialStore.swift */; };
+		A621AEE91B46CC2E00D31A7A /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEE81B46CC2E00D31A7A /* OAuth.swift */; };
+		A621AEEB1B46CC3600D31A7A /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = A621AEEA1B46CC3600D31A7A /* Scope.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,12 @@
 		A621AED81B46CC0300D31A7A /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		A621AED91B46CC0300D31A7A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		A621AEDA1B46CC0300D31A7A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		A621AEE01B46CC2400D31A7A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A621AEE11B46CC2400D31A7A /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		A621AEE21B46CC2400D31A7A /* CredentialStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialStoreProtocol.swift; sourceTree = "<group>"; };
+		A621AEE31B46CC2400D31A7A /* DefaultCredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCredentialStore.swift; sourceTree = "<group>"; };
+		A621AEE81B46CC2E00D31A7A /* OAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
+		A621AEEA1B46CC3600D31A7A /* Scope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scope.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				A621AEBF1B46CA1E00D31A7A /* SFOAuthSwift.h */,
+				A621AEE01B46CC2400D31A7A /* Const.swift */,
+				A621AEE81B46CC2E00D31A7A /* OAuth.swift */,
+				A621AEEA1B46CC3600D31A7A /* Scope.swift */,
+				A621AEE11B46CC2400D31A7A /* Credential.swift */,
+				A621AEE21B46CC2400D31A7A /* CredentialStoreProtocol.swift */,
+				A621AEE31B46CC2400D31A7A /* DefaultCredentialStore.swift */,
 				A621AEBD1B46CA1E00D31A7A /* Supporting Files */,
 			);
 			path = SFOAuthSwift;
@@ -229,6 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A621AEE71B46CC2400D31A7A /* DefaultCredentialStore.swift in Sources */,
+				A621AEE51B46CC2400D31A7A /* Credential.swift in Sources */,
+				A621AEE61B46CC2400D31A7A /* CredentialStoreProtocol.swift in Sources */,
+				A621AEE41B46CC2400D31A7A /* Const.swift in Sources */,
+				A621AEEB1B46CC3600D31A7A /* Scope.swift in Sources */,
+				A621AEE91B46CC2E00D31A7A /* OAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +367,7 @@
 		A621AED11B46CA1E00D31A7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -356,12 +381,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A621AED21B46CA1E00D31A7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
